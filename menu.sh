@@ -1,17 +1,11 @@
 #!/bin/bash
 if ! which dialog > /dev/null; then
-   echo -e "Command not found! Install? (y/n) \c"
-   read
-   if "$REPLY" = "y"; then
-      sudo apt-get install dialog
-   fi
+   echo -e "Command not found! Installing! \c"
+   sudo apt-get install dialog
 fi
 if ! which nano > /dev/null; then
-   echo -e "Command not found! Install? (y/n) \c"
-   read
-   if "$REPLY" = "y"; then
-      sudo apt-get install nano
-   fi
+   echo -e "Command not found! Installing! \c"
+   sudo apt-get install nano
 fi
 
 
@@ -48,8 +42,7 @@ if ! which lynx > /dev/null; then
    echo -e "Lynx not found, installing. \c"
       sudo apt-get install lynx
 fi
-
-lynx
+exec lynx;
 
 }
 #
