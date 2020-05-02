@@ -15,7 +15,9 @@ if ! which htop > /dev/null; then
    echo -e "Command not found! Installing htop. \c"
    sudo apt-get install htop
 fi
-
+# Going to store temp nano files here for now
+mkdir nano_temp
+cd nano_temp/
 
 INPUT=/tmp/menu.sh.$$
 
